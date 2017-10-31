@@ -6,11 +6,14 @@
 - 考虑团队与个人
 - 
 
-```
+```mermaid
 graph TD
-Archery
-Archery-->Archery1((individual-70m))
-Archery-->Archery2((team-70m))
+    client1-->|read / write|SVN((SVN server))
+    client2-->|read only|SVN
+    client3-->|read / write|SVN
+    client4-->|read only|SVN
+    client5(...)-->SVN
+    SVN---|store the data|sharedrive
 ```
 ```
 graph TD
